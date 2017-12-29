@@ -11,16 +11,10 @@ class DogsTableSeeder extends Seeder
      */
     public function run()
     {
-     //    \App\Dog::truncate();
-	    // \App\Dog::create(['name' => 'Joe']);
-	    // \App\Dog::create(['name' => 'Jock']);
-	    // \App\Dog::create(['name' => 'Jackie']);
-	    // \App\Dog::create(['name' => 'Jane']);
-
-	    \App\Dog::truncate();
-
-	    (new Faker\Generator)->seed(123);
-
-	    factory(App\Dog::class, 50)->create();
+        \App\Dogs::truncate();
+		\App\Dogs::create(['name' => 'Joe', 'age' => 5 ]);
+	    \App\Dogs::create(['name' => 'Jock', 'age' => 7 ]);
+	    \App\Dogs::create(['name' => 'Jackie', 'age' => 2 ]);
+	    \App\Dogs::create(['name' => 'Jane', 'age' => 9 ]);
     }
 }
